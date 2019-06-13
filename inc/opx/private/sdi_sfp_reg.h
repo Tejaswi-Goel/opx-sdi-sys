@@ -67,6 +67,7 @@ typedef enum {
     SFP_ENHANCED_OPTIONS_OFFSET     = 93,
     SFP_CC_EXT_OFFSET               = 95,
     SFP_DELL_PRODUCT_ID_OFFSET         = 96,
+    SFP_EXT_MOD_CTRL_SUPPORT_OFFSET = 101,
     SFP_INTERNAL_PART_NUMBER_OFFSET = 134,
 } sfp_reg_offset_t;
 
@@ -310,4 +311,7 @@ typedef enum {
 #define SFP_PLUS_CABLE_TECH_MASK       (0x3)  /* SFP+ Cable Technology mask */
 #define SFP_PLUS_CABLE_TECH_BIT_SHIFT  (2)
 
+
+/* Extmod ctrl */
+#define SFP_EXT_MOD_CTRL_BIT            (0)
 #endif

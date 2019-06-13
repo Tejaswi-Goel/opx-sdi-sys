@@ -414,7 +414,7 @@ static void sdi_max6699_device_database_init(std_config_node_t cur_node,
                  "max6699-%d-%d",dev_hdl->instance,sensor_id);
     } else{
         max6699_data->alias[sensor_id] = calloc((strlen(node_attr)+1),1);
-        safestrncpy(max6699_data->alias[sensor_id],node_attr,(strlen(node_attr)+1));
+        safestrncpy(max6699_data->alias[sensor_id],node_attr, SDI_MAX_NAME_LEN);
     }
 
     sdi_resource_add(SDI_RESOURCE_TEMPERATURE,max6699_data->alias[sensor_id],

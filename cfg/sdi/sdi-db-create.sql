@@ -75,6 +75,15 @@ CREATE TABLE Entity_Resource (
     FOREIGN KEY ( Entity_Handle ) REFERENCES Entity_Info(Entity_Handle)
 );
 
+CREATE TABLE CommDev (
+    Resource_Handle     INTEGER,
+    Service_Tag         TEXT,
+    Firmware_Version    TEXT,
+    Slot_Occupation     INTEGER,
+
+    PRIMARY KEY ( Resource_Handle )
+);
+
 CREATE TABLE Fan (
     Entity_Handle       INTEGER,
     Resource_Handle     INTEGER,

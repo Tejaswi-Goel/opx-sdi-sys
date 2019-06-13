@@ -54,7 +54,7 @@ TEST(sdi_vm_entity_info_unittest, entityLookup)
 /* FAIL: incase of entity presence */
 TEST(sdi_vm_entity_info_unittest, entityPresenceGet)
 {
-    bool presence;
+    bool presence=false;
     sdi_entity_hdl_t e_hdl;
     ASSERT_EQ (STD_ERR_OK, sdi_sys_init ());
     //setup to make the entity absent

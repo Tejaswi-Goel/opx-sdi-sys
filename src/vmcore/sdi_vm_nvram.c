@@ -38,13 +38,11 @@
 static int sdi_nvram_find_or_create_nvram_file(const char *path, uint_t size)
 {
     char nvram_file[NAME_MAX];
-    int access_rc;
     int fd;
 
     sdi_db_construct_path(nvram_file, path);
-    access_rc = access(nvram_file, F_OK);
 
-    if (access_rc == -1) {
+    if (access(nvram_file, F_OK) == -1) {
         if (errno != ENOENT)  return (-1);
 
         fd = open(nvram_file, O_CREAT | O_RDWR, S_IRWXU | S_IRWXG | S_IRWXO);
